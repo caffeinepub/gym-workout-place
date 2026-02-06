@@ -1,0 +1,238 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-coherent-modern-wordpress-gym-theme-visual-design-system-for-the-site-and-apply-it-consistently-dark-energetic-palette-black-red-dark-grey-bold-headings-strong-cta-buttons-clean-spacing-professional-fitness-vibe",
+      "featureTitle": "Create a coherent, modern “WordPress gym theme” visual design system for the site and apply it consistently (dark energetic palette: black/red/dark grey; bold headings; strong CTA buttons; clean spacing; professional fitness vibe).",
+      "files": [
+        "frontend/src/components/CtaButton.tsx",
+        "frontend/src/components/DesignSystem.ts",
+        "frontend/src/components/Section.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-site-wide-layout-components-sticky-header-navigation-with-links-to-home-about-workouts-programs-trainers-membership-plans-gallery-contact-footer-with-social-media-icons-links-smooth-scrolling-for-in-page-anchor-navigation-where-applicable",
+      "featureTitle": "Implement site-wide layout components: sticky header navigation with links to Home, About, Workouts/Programs, Trainers, Membership/Plans, Gallery, Contact; footer with social media icons/links; smooth scrolling for in-page anchor navigation where applicable.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/SiteFooter.tsx",
+        "frontend/src/components/SiteHeader.tsx",
+        "frontend/src/components/SiteLayout.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-home-page-for-gym-workout-place-with-hero-image-headline-transform-your-body-transform-your-life-sub-text-and-cta-buttons-join-now-free-trial-contact-us-plus-sections-why-choose-us-certified-trainers-modern-equipment-affordable-plans-popular-workouts-with-images-member-transformation-highlights-and-testimonials",
+      "featureTitle": "Build the Home page for “Gym Workout Place” with: hero image, headline “Transform Your Body. Transform Your Life.”, sub-text, and CTA buttons (Join Now, Free Trial, Contact Us); plus sections: Why Choose Us (Certified Trainers, Modern Equipment, Affordable Plans), Popular Workouts (with images), Member Transformation Highlights, and Testimonials.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/FeatureIconCard.tsx",
+        "frontend/src/components/TestimonialCard.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-about-us-page-with-a-professional-gym-interior-hero-image-the-provided-mission-text-and-a-values-section-listing-discipline-consistency-results",
+      "featureTitle": "Create the About Us page with a professional gym interior hero image, the provided mission text, and a values section listing: Discipline, Consistency, Results.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/AboutPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-workouts-programs-page-containing-sections-for-each-program-strength-training-weight-training-cardio-training-crossfit-training-functional-training-fat-loss-program-muscle-gain-program-hiit-workout-personal-training-each-program-must-display-a-high-quality-image-and-a-short-2-3-line-description",
+      "featureTitle": "Create the Workouts / Programs page containing sections for each program: Strength Training, Weight Training, Cardio Training, CrossFit Training, Functional Training, Fat Loss Program, Muscle Gain Program, HIIT Workout, Personal Training. Each program must display a high-quality image and a short 2–3 line description.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ProgramCard.tsx",
+        "frontend/src/pages/ProgramsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-trainers-page-showing-professional-trainer-images-and-trainer-cards-including-certified-fitness-coach-experience-in-weight-loss-muscle-building-and-personal-training-support",
+      "featureTitle": "Create the Trainers page showing professional trainer images and trainer cards including: “Certified Fitness Coach”, “Experience in weight loss & muscle building”, and “Personal training support”.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/TrainerCard.tsx",
+        "frontend/src/pages/TrainersPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-membership-plans-page-with-clean-pricing-cards-for-monthly-plan-quarterly-plan-half-yearly-plan-yearly-plan-each-plan-must-list-features-full-gym-access-all-workout-programs-trainer-guidance-flexible-timings-and-include-clear-ctas",
+      "featureTitle": "Create the Membership / Plans page with clean pricing cards for: Monthly Plan, Quarterly Plan, Half-Yearly Plan, Yearly Plan. Each plan must list features: Full gym access, All workout programs, Trainer guidance, Flexible timings, and include clear CTAs.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/PricingCard.tsx",
+        "frontend/src/pages/PlansPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-gallery-page-with-categorized-sections-for-gym-interior-images-workout-sessions-equipment-photos-and-client-workout-moments",
+      "featureTitle": "Create the Gallery page with categorized sections for gym interior images, workout sessions, equipment photos, and client workout moments.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/GalleryGrid.tsx",
+        "frontend/src/pages/GalleryPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-contact-us-page-with-contact-form-whatsapp-button-call-now-button-google-map-location-link-and-business-info-address-phone-number-opening-hours-use-external-links-for-whatsapp-and-google-maps-no-embedded-map-api-requirement",
+      "featureTitle": "Create the Contact Us page with: contact form, WhatsApp button, Call Now button, Google Map location link, and business info (address, phone number, opening hours). Use external links for WhatsApp and Google Maps (no embedded map/API requirement).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/BusinessInfo.tsx",
+        "frontend/src/components/ContactForm.tsx",
+        "frontend/src/pages/ContactPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-the-site-is-seo-friendly-semantic-heading-hierarchy-h1-h2-h3-sensible-page-titles-meta-defaults-per-route-and-accessible-components-labels-for-form-fields-keyboard-navigable-menus-focus-states",
+      "featureTitle": "Ensure the site is SEO-friendly: semantic heading hierarchy (H1/H2/H3), sensible page titles/meta defaults per route, and accessible components (labels for form fields, keyboard navigable menus, focus states).",
+      "files": [
+        "frontend/src/components/SiteHeader.tsx",
+        "frontend/src/hooks/usePageTitle.ts",
+        "frontend/src/index.css",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/ContactPage.tsx",
+        "frontend/src/pages/GalleryPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/PlansPage.tsx",
+        "frontend/src/pages/ProgramsPage.tsx",
+        "frontend/src/pages/TrainersPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-generated-image-assets-to-the-frontend-as-static-files-and-wire-them-into-the-ui-store-under-frontend-public-assets-generated-and-reference-them-from-pages-cards",
+      "featureTitle": "Add generated image assets to the frontend as static files and wire them into the UI (store under frontend/public/assets/generated and reference them from pages/cards).",
+      "files": [
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/GalleryPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/ProgramsPage.tsx",
+        "frontend/src/pages/TrainersPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

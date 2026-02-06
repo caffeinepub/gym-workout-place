@@ -1,0 +1,480 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Gym Workout Place — Dark fitness marketing website (frontend)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create and apply a consistent modern dark (black/red/dark grey) design system with bold typography, strong CTAs, and responsive spacing across all pages.",
+      "acceptanceCriteria": [
+        "All pages share a consistent header/footer, typography scale, button styles, spacing, and dark theme colors (black/red/dark grey).",
+        "Primary CTAs are visually prominent and accessible (contrast, focus states).",
+        "Layout is mobile-first and responsive across common breakpoints."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Add global styles for the dark energetic theme (color tokens, typography scale, focus states, spacing defaults) and enable smooth, readable defaults across breakpoints."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme tokens to support the gym dark palette (black/red/dark grey), consistent radii/shadows, and reusable semantic color names that will be used throughout the UI."
+        },
+        {
+          "path": "frontend/src/components/DesignSystem.ts",
+          "operation": "create",
+          "description": "Centralize shared design constants (site name, nav items, social links, CTA labels, reusable className strings) to keep styling consistent across pages."
+        },
+        {
+          "path": "frontend/src/components/Section.tsx",
+          "operation": "create",
+          "description": "Create a reusable section wrapper component for consistent spacing, max-width, and headings across pages."
+        },
+        {
+          "path": "frontend/src/components/CtaButton.tsx",
+          "operation": "create",
+          "description": "Create a reusable CTA button wrapper using shadcn-ui (e.g., Button) styling variants for primary/secondary CTAs. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement site-wide sticky header navigation, footer with social icons/links, and smooth scrolling for in-page anchors.",
+      "acceptanceCriteria": [
+        "Header remains visible while scrolling and provides navigation to each page.",
+        "Footer includes social icons that link to placeholder external URLs (configurable).",
+        "Smooth scrolling is enabled for anchor jumps without breaking normal routing."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SiteHeader.tsx",
+          "operation": "create",
+          "description": "Implement a sticky, accessible header with navigation links to Home, About, Workouts/Programs, Trainers, Membership/Plans, Gallery, Contact. Use shadcn-ui navigation-related primitives where appropriate (e.g., buttons/menus). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/SiteFooter.tsx",
+          "operation": "create",
+          "description": "Implement a footer with configurable placeholder social media links and icon buttons. Use shadcn-ui Button for icon-button styling consistency. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/SiteLayout.tsx",
+          "operation": "create",
+          "description": "Create a shared page layout that composes SiteHeader + main content + SiteFooter and ensures consistent padding and background across routes."
+        },
+        {
+          "path": "frontend/src/hooks/useScrollToHash.ts",
+          "operation": "create",
+          "description": "Add a small hook to perform smooth scrolling to hash anchors when the route changes (without breaking normal routing)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Wire SiteLayout and all page routes; ensure navigation links and hash-based section jumps work correctly (including smooth scrolling via useScrollToHash)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build the Home page with hero, required headline/sub-text, CTAs, and sections: Why Choose Us, Popular Workouts, Transformation Highlights, Testimonials.",
+      "acceptanceCriteria": [
+        "Home hero displays the exact headline and sub-text provided.",
+        "CTA buttons are visible above the fold on mobile and route/scroll to appropriate sections/pages (Join Now → Plans, Free Trial → Contact form, Contact Us → Contact page/section).",
+        "Why Choose Us shows exactly the three benefit items specified.",
+        "Popular Workouts, Transformations, and Testimonials render with images and readable content on mobile and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Implement Home page sections and ensure hero includes the exact headline “Transform Your Body. Transform Your Life.” and provided sub-text; include CTAs wired to Plans and Contact. Use shadcn-ui Card/Button components for consistent section UI. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/TestimonialCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable testimonial card component for the Home testimonials section using shadcn-ui Card primitives. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/FeatureIconCard.tsx",
+          "operation": "create",
+          "description": "Create a small feature card component for “Why Choose Us” items with consistent icon/heading/body styling using shadcn-ui Card. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register the Home route and ensure header navigation points to it; wire in-page section anchors on Home (e.g., #workouts, #testimonials) where applicable."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create the About Us page with a hero image, the provided mission text, and values section (Discipline, Consistency, Results).",
+      "acceptanceCriteria": [
+        "About page includes the exact provided paragraph and the three values.",
+        "Hero image renders correctly on mobile and desktop (no overflow/layout shift)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "create",
+          "description": "Implement About page with hero image, exact mission paragraph text, and a values section listing Discipline, Consistency, Results. Use shadcn-ui Card for the values list styling. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register the About route and ensure header navigation links to it."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create the Workouts/Programs page with nine program sections, each including a high-quality image and 2–3 line description, responsive on mobile.",
+      "acceptanceCriteria": [
+        "All nine programs are present, each with an image and a 2–3 line description.",
+        "Layout supports grid/list views that remain readable on small screens."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProgramsPage.tsx",
+          "operation": "create",
+          "description": "Implement Workouts/Programs page containing all nine required programs with images and 2–3 line descriptions; implement a responsive grid that becomes a single-column list on small screens. Use shadcn-ui Card for program tiles. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ProgramCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable program card component (image, title, short description) using shadcn-ui Card primitives for consistent styling. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register the Workouts/Programs route and ensure header navigation links to it."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Create the Trainers page with professional trainer images and at least 3 trainer cards including the specified details text.",
+      "acceptanceCriteria": [
+        "At least 3 trainer cards are displayed with images and the specified details (as text).",
+        "Cards are responsive and maintain consistent styling with the rest of the site."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/TrainersPage.tsx",
+          "operation": "create",
+          "description": "Implement Trainers page with at least three trainer cards (images) and required text: “Certified Fitness Coach”, “Experience in weight loss & muscle building”, “Personal training support”. Use shadcn-ui Card for consistent card styling. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/TrainerCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable trainer card component using shadcn-ui Card primitives and accessible image/alt text conventions. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register the Trainers route and ensure header navigation links to it."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Create the Membership/Plans page with four pricing cards listing required features and clear CTAs to contact/free trial.",
+      "acceptanceCriteria": [
+        "All four plans are shown as pricing cards with the four specified features.",
+        "Each plan includes a CTA that routes to Contact/Free Trial or opens the contact form section."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/PlansPage.tsx",
+          "operation": "create",
+          "description": "Implement Membership/Plans page with pricing cards for Monthly, Quarterly, Half-Yearly, Yearly plans; include required features and CTA buttons that navigate to the Contact page and/or the contact form section. Use shadcn-ui Card/Button for pricing UI. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/PricingCard.tsx",
+          "operation": "create",
+          "description": "Create reusable pricing card component including title, price placeholder, feature list, and CTA button using shadcn-ui Card/Button. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register the Membership/Plans route and ensure header navigation links to it."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Create the Gallery page with categorized image sections: gym interior, workout sessions, equipment photos, client workout moments.",
+      "acceptanceCriteria": [
+        "Gallery renders at least 4 categories with multiple images per category.",
+        "Images load responsively with consistent aspect ratios/cropping."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/GalleryPage.tsx",
+          "operation": "create",
+          "description": "Implement Gallery page with four categories (interior/workout/equipment/client moments) and multiple responsive images per category using consistent cropping/aspect ratios."
+        },
+        {
+          "path": "frontend/src/components/GalleryGrid.tsx",
+          "operation": "create",
+          "description": "Create a reusable responsive image grid component for gallery categories (uniform aspect ratio, lazy-loading where appropriate)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register the Gallery route and ensure header navigation links to it."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Create the Contact Us page with a validated contact form (success state), WhatsApp/Call/Google Maps external links, and business info (address/phone/hours).",
+      "acceptanceCriteria": [
+        "Contact form validates required fields and shows a success state after submission.",
+        "WhatsApp and Call buttons are actionable on mobile (tel: link for call; https://wa.me/... link for WhatsApp) using configurable placeholders.",
+        "Map is provided as an external Google Maps link (opens in new tab).",
+        "Business info (address/phone/hours) is displayed on the page."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "create",
+          "description": "Implement Contact page layout: business info, external links for WhatsApp (wa.me), Call (tel:), Google Maps (new tab), and a contact form with validation + success state. Use shadcn-ui Input/Textarea/Button components for consistent form UI. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ContactForm.tsx",
+          "operation": "create",
+          "description": "Create a contact form component with required field validation, loading/submitted states, and submit handler that calls the backend capability via useActor(). Use shadcn-ui form controls for accessibility and styling. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/BusinessInfo.tsx",
+          "operation": "create",
+          "description": "Create a business info component that reads address/phone/opening hours (using the backend actor where available) and renders them with accessible markup."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register the Contact route and ensure header navigation links to it; ensure Plans/Home CTAs can navigate to Contact and optionally to the form section hash."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Improve SEO and accessibility: semantic headings, per-route page titles, labeled form fields, keyboard navigable menus, and visible focus states.",
+      "acceptanceCriteria": [
+        "Each page has exactly one H1 and logical subsequent headings.",
+        "Page titles are set per route (e.g., “Home | Gym Workout Place”).",
+        "Form fields have associated labels; interactive elements are keyboard accessible and show visible focus states."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/usePageTitle.ts",
+          "operation": "create",
+          "description": "Add a small hook to set document.title per route/page (e.g., “Home | Gym Workout Place”) without adding new dependencies."
+        },
+        {
+          "path": "frontend/src/components/SiteHeader.tsx",
+          "operation": "modify",
+          "description": "Ensure the header navigation is keyboard accessible (tab order, visible focus styles) and uses semantic navigation markup."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Ensure Home page heading hierarchy (exactly one H1, logical H2/H3 in sections) and apply per-page title via usePageTitle."
+        },
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "modify",
+          "description": "Ensure About page heading hierarchy and apply per-page title via usePageTitle."
+        },
+        {
+          "path": "frontend/src/pages/ProgramsPage.tsx",
+          "operation": "modify",
+          "description": "Ensure Programs page heading hierarchy and apply per-page title via usePageTitle."
+        },
+        {
+          "path": "frontend/src/pages/TrainersPage.tsx",
+          "operation": "modify",
+          "description": "Ensure Trainers page heading hierarchy and apply per-page title via usePageTitle."
+        },
+        {
+          "path": "frontend/src/pages/PlansPage.tsx",
+          "operation": "modify",
+          "description": "Ensure Plans page heading hierarchy and apply per-page title via usePageTitle."
+        },
+        {
+          "path": "frontend/src/pages/GalleryPage.tsx",
+          "operation": "modify",
+          "description": "Ensure Gallery page heading hierarchy and apply per-page title via usePageTitle."
+        },
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "modify",
+          "description": "Ensure Contact page heading hierarchy, labeled form fields (via ContactForm), and apply per-page title via usePageTitle."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add/verify global focus-visible styles and accessible contrast defaults for interactive elements across the dark theme."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Add required generated images as static assets and wire them into Home/About/Programs/Trainers/Gallery UI.",
+      "acceptanceCriteria": [
+        "All required generated images exist under frontend/public/assets/generated.",
+        "Home/About/Programs/Trainers/Gallery use the generated images (no broken links).",
+        "The site remains performant (use reasonable image dimensions for their usage)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/home-hero.dim_2400x1350.png",
+          "operation": "create",
+          "description": "Add generated image asset for the Home hero."
+        },
+        {
+          "path": "frontend/public/assets/generated/about-hero.dim_2000x1200.png",
+          "operation": "create",
+          "description": "Add generated image asset for the About hero."
+        },
+        {
+          "path": "frontend/public/assets/generated/program-strength.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for the Strength Training program."
+        },
+        {
+          "path": "frontend/public/assets/generated/program-weight.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for the Weight Training program."
+        },
+        {
+          "path": "frontend/public/assets/generated/program-cardio.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for the Cardio Training program."
+        },
+        {
+          "path": "frontend/public/assets/generated/program-crossfit.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for the CrossFit Training program."
+        },
+        {
+          "path": "frontend/public/assets/generated/program-functional.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for the Functional Training program."
+        },
+        {
+          "path": "frontend/public/assets/generated/program-fatloss.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for the Fat Loss Program."
+        },
+        {
+          "path": "frontend/public/assets/generated/program-musclegain.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for the Muscle Gain Program."
+        },
+        {
+          "path": "frontend/public/assets/generated/program-hiit.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for the HIIT Workout program."
+        },
+        {
+          "path": "frontend/public/assets/generated/program-personaltraining.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for the Personal Training program."
+        },
+        {
+          "path": "frontend/public/assets/generated/trainer-1.dim_1200x1200.png",
+          "operation": "create",
+          "description": "Add generated image asset for Trainer 1."
+        },
+        {
+          "path": "frontend/public/assets/generated/trainer-2.dim_1200x1200.png",
+          "operation": "create",
+          "description": "Add generated image asset for Trainer 2."
+        },
+        {
+          "path": "frontend/public/assets/generated/trainer-3.dim_1200x1200.png",
+          "operation": "create",
+          "description": "Add generated image asset for Trainer 3."
+        },
+        {
+          "path": "frontend/public/assets/generated/transformation-1.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add generated image asset for Transformation highlight 1."
+        },
+        {
+          "path": "frontend/public/assets/generated/transformation-2.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add generated image asset for Transformation highlight 2."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-interior-1.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for Gallery interior 1."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-interior-2.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for Gallery interior 2."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-workout-1.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for Gallery workout 1."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-workout-2.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for Gallery workout 2."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-equipment-1.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for Gallery equipment 1."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-equipment-2.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for Gallery equipment 2."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-client-1.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for Gallery client moment 1."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-client-2.dim_1600x1000.png",
+          "operation": "create",
+          "description": "Add generated image asset for Gallery client moment 2."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Wire generated images into the Home page: frontend/public/assets/generated/home-hero.dim_2400x1350.png, frontend/public/assets/generated/transformation-1.dim_1600x900.png, frontend/public/assets/generated/transformation-2.dim_1600x900.png, plus representative program images for Popular Workouts."
+        },
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "modify",
+          "description": "Wire frontend/public/assets/generated/about-hero.dim_2000x1200.png into the About hero section."
+        },
+        {
+          "path": "frontend/src/pages/ProgramsPage.tsx",
+          "operation": "modify",
+          "description": "Wire program images into the nine programs: frontend/public/assets/generated/program-strength.dim_1600x1000.png, program-weight.dim_1600x1000.png, program-cardio.dim_1600x1000.png, program-crossfit.dim_1600x1000.png, program-functional.dim_1600x1000.png, program-fatloss.dim_1600x1000.png, program-musclegain.dim_1600x1000.png, program-hiit.dim_1600x1000.png, program-personaltraining.dim_1600x1000.png."
+        },
+        {
+          "path": "frontend/src/pages/TrainersPage.tsx",
+          "operation": "modify",
+          "description": "Wire trainer images into trainer cards: frontend/public/assets/generated/trainer-1.dim_1200x1200.png, trainer-2.dim_1200x1200.png, trainer-3.dim_1200x1200.png."
+        },
+        {
+          "path": "frontend/src/pages/GalleryPage.tsx",
+          "operation": "modify",
+          "description": "Wire gallery category images: frontend/public/assets/generated/gallery-interior-1.dim_1600x1000.png, gallery-interior-2.dim_1600x1000.png, gallery-workout-1.dim_1600x1000.png, gallery-workout-2.dim_1600x1000.png, gallery-equipment-1.dim_1600x1000.png, gallery-equipment-2.dim_1600x1000.png, gallery-client-1.dim_1600x1000.png, gallery-client-2.dim_1600x1000.png."
+        }
+      ]
+    }
+  ]
+}

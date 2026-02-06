@@ -1,0 +1,93 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-06T23:12:35.902Z",
+  "summary": "Diff adds a TanStack Router app shell with header/footer layout, reusable UI cards (program/pricing/trainer/testimonial), contact form and business info components wired to React Query hooks, and a Motoko backend actor with contact submission and business info query methods. Several key requirements cannot be verified due to omitted/truncated files (notably page implementations and static assets). Some backend/API pieces appear unrequested (trap methods for WhatsApp/call/maps).",
+  "missing_requirements": [
+    {
+      "id": "REQ-2",
+      "requirement": "Smooth scrolling for in-page anchor navigation where applicable.",
+      "reason": "No evidence of any smooth-scroll behavior (e.g., CSS scroll-behavior, scroll-to handlers) in the shown added files; only normal route navigation is present.",
+      "evidence": [
+        "frontend/src/components/SiteHeader.tsx",
+        "frontend/src/App.tsx",
+        "frontend/src/components/SiteLayout.tsx"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "requirement": "Persist contact form submissions in the backend actor.",
+      "reason": "The backend defines `let submissions = List.empty<ContactSubmission>();` with no `stable` storage, and uses `submissions.add(newSubmission)` on a value that appears immutable; based on the shown code there is no clear persistent state mutation/retention across calls/upgrades.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "requirement": "Add generated image assets under frontend/public/assets/generated and wire them into pages/cards.",
+      "reason": "No generated image assets are shown in the diff summary, and no references to `/assets/generated/...` appear in the shown components.",
+      "evidence": [
+        "frontend/src/components/ProgramCard.tsx",
+        "frontend/src/components/TrainerCard.tsx",
+        "frontend/src/components/GalleryGrid.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Backend methods for WhatsApp/call/maps that intentionally trap (initiateWhatsApp, callNow, openGoogleMaps).",
+      "reason": "The request specifies WhatsApp/tel/Google Maps should be external links handled in the frontend (no API integration). Adding backend trap methods is extra functionality not requested.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Backend query endpoints for business info (getPhoneNumber/getAddress/getOpeningHours).",
+      "reason": "Business info only needed to be displayed on the Contact page; fetching it from backend via dedicated methods is not explicitly requested (though it may be acceptable).",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/components/BusinessInfo.tsx",
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    }
+  ],
+  "confidence": 0.56,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/BusinessInfo.tsx",
+    "frontend/src/components/ContactForm.tsx",
+    "frontend/src/components/CtaButton.tsx",
+    "frontend/src/components/DesignSystem.ts",
+    "frontend/src/components/FeatureIconCard.tsx",
+    "frontend/src/components/GalleryGrid.tsx",
+    "frontend/src/components/PricingCard.tsx",
+    "frontend/src/components/ProgramCard.tsx",
+    "frontend/src/components/Section.tsx",
+    "frontend/src/components/SiteFooter.tsx",
+    "frontend/src/components/SiteHeader.tsx",
+    "frontend/src/components/SiteLayout.tsx",
+    "frontend/src/components/TestimonialCard.tsx",
+    "frontend/src/components/TrainerCard.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/usePageTitle.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/lib/utils.ts",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/AboutPage.tsx",
+    "frontend/src/pages/ContactPage.tsx",
+    "frontend/src/pages/GalleryPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/PlansPage.tsx",
+    "frontend/src/pages/ProgramsPage.tsx",
+    "frontend/src/pages/TrainersPage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

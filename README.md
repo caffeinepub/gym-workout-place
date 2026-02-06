@@ -1,2 +1,3 @@
-# gym-workout-place
-Exported from Caffeine project: Gym Workout Place
+## Gym Workout Place
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

@@ -1,0 +1,273 @@
+{
+  "kind": "build_request",
+  "title": "Gym Workout Place — Modern dark fitness marketing website (multi-page, mobile responsive)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a coherent, modern “WordPress gym theme” visual design system for the site and apply it consistently (dark energetic palette: black/red/dark grey; bold headings; strong CTA buttons; clean spacing; professional fitness vibe).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2",
+          "msg-4"
+        ],
+        "quotes": [
+          "Create a modern, professional, mobile-responsive gym website using WordPress design style.",
+          "Dark & energetic fitness theme (black, red, dark grey)",
+          "all think right you build website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All pages share a consistent header/footer, typography scale, button styles, spacing, and dark theme colors (black/red/dark grey).",
+        "Primary CTAs are visually prominent and accessible (contrast, focus states).",
+        "Layout is mobile-first and responsive across common breakpoints."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement site-wide layout components: sticky header navigation with links to Home, About, Workouts/Programs, Trainers, Membership/Plans, Gallery, Contact; footer with social media icons/links; smooth scrolling for in-page anchor navigation where applicable.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Extra Features:\n\nSticky header navigation\n\nSmooth scrolling\n\nFooter with social media icons"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header remains visible while scrolling and provides navigation to each page.",
+        "Footer includes social icons that link to placeholder external URLs (configurable).",
+        "Smooth scrolling is enabled for anchor jumps without breaking normal routing."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build the Home page for “Gym Workout Place” with: hero image, headline “Transform Your Body. Transform Your Life.”, sub-text, and CTA buttons (Join Now, Free Trial, Contact Us); plus sections: Why Choose Us (Certified Trainers, Modern Equipment, Affordable Plans), Popular Workouts (with images), Member Transformation Highlights, and Testimonials.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Gym Name: Gym Workout Place",
+          "Home Page\n\nHero section with gym image and headline:\n“Transform Your Body. Transform Your Life.”\n\nSub-text:\nJoin Gym Workout Place and achieve your fitness goals with expert trainers and modern equipment.\n\nCTA Buttons: Join Now | Free Trial | Contact Us",
+          "Sections:\n\nWhy Choose Us (Certified Trainers, Modern Equipment, Affordable Plans)\n\nPopular Workouts (with images)\n\nMember Transformation Highlights",
+          "Smooth scrolling",
+          "Testimonials section"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home hero displays the exact headline and sub-text provided.",
+        "CTA buttons are visible above the fold on mobile and route/scroll to appropriate sections/pages (Join Now → Plans, Free Trial → Contact form, Contact Us → Contact page/section).",
+        "Why Choose Us shows exactly the three benefit items specified.",
+        "Popular Workouts, Transformations, and Testimonials render with images and readable content on mobile and desktop."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create the About Us page with a professional gym interior hero image, the provided mission text, and a values section listing: Discipline, Consistency, Results.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "About Us\n\nProfessional gym interior image\n\nText:\nGym Workout Place is a professional fitness center dedicated to helping people build strength, confidence, and a healthy lifestyle. Our mission is to provide quality training, a motivating environment, and result-oriented workout programs.\n\nValues: Discipline, Consistency, Results"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About page includes the exact provided paragraph and the three values.",
+        "Hero image renders correctly on mobile and desktop (no overflow/layout shift)."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create the Workouts / Programs page containing sections for each program: Strength Training, Weight Training, Cardio Training, CrossFit Training, Functional Training, Fat Loss Program, Muscle Gain Program, HIIT Workout, Personal Training. Each program must display a high-quality image and a short 2–3 line description.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Workouts / Programs Page (with images for each)\n\nInclude detailed workout sections:\n\nStrength Training\n\nWeight Training\n\nCardio Training\n\nCrossFit Training\n\nFunctional Training\n\nFat Loss Program\n\nMuscle Gain Program\n\nHIIT Workout\n\nPersonal Training\n\nEach workout should have:\n\nHigh-quality workout image\n\nShort description (2–3 lines)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All nine programs are present, each with an image and a 2–3 line description.",
+        "Layout supports grid/list views that remain readable on small screens."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create the Trainers page showing professional trainer images and trainer cards including: “Certified Fitness Coach”, “Experience in weight loss & muscle building”, and “Personal training support”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Trainers Page\n\nProfessional trainer images\n\nTrainer details:\n\nCertified Fitness Coach\n\nExperience in weight loss & muscle building\n\nPersonal training support"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 3 trainer cards are displayed with images and the specified details (as text).",
+        "Cards are responsive and maintain consistent styling with the rest of the site."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Create the Membership / Plans page with clean pricing cards for: Monthly Plan, Quarterly Plan, Half-Yearly Plan, Yearly Plan. Each plan must list features: Full gym access, All workout programs, Trainer guidance, Flexible timings, and include clear CTAs.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Membership / Plans Page\n\nDisplay plans in clean pricing cards:\n\nMonthly Plan\n\nQuarterly Plan\n\nHalf-Yearly Plan\n\nYearly Plan\n\nInclude features:\n\nFull gym access\n\nAll workout programs\n\nTrainer guidance\n\nFlexible timings"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All four plans are shown as pricing cards with the four specified features.",
+        "Each plan includes a CTA that routes to Contact/Free Trial or opens the contact form section."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Create the Gallery page with categorized sections for gym interior images, workout sessions, equipment photos, and client workout moments.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Gallery Page\n\nGym interior images\n\nWorkout sessions\n\nEquipment photos\n\nClient workout moments"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Gallery renders at least 4 categories with multiple images per category.",
+        "Images load responsively with consistent aspect ratios/cropping."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Create the Contact Us page with: contact form, WhatsApp button, Call Now button, Google Map location link, and business info (address, phone number, opening hours). Use external links for WhatsApp and Google Maps (no embedded map/API requirement).",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2",
+          "msg-3",
+          "msg-4"
+        ],
+        "quotes": [
+          "Contact Us Page\n\nContact form\n\nWhatsApp button\n\nCall now button\n\nGoogle Map location\n\nAddress, phone number, opening hours",
+          "For features like WhatsApp button and Google Map, should these function as simple external links, since direct WhatsApp API and embedded maps are not supported?",
+          "all think right you build website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact form validates required fields and shows a success state after submission.",
+        "WhatsApp and Call buttons are actionable on mobile (tel: link for call; https://wa.me/... link for WhatsApp) using configurable placeholders.",
+        "Map is provided as an external Google Maps link (opens in new tab).",
+        "Business info (address/phone/hours) is displayed on the page."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Implement backend support for contact form submissions: store submitted messages (name, email/phone, message, timestamp) in the single Motoko actor and expose query/update methods for creating and (optionally) listing submissions for demo/admin debugging.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Contact form"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A backend update method accepts a contact submission payload and persists it.",
+        "A backend query method can return recent submissions (suitable for verifying the form works).",
+        "No schema migration file is introduced unless persistent state requires upgrade handling."
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Ensure the site is SEO-friendly: semantic heading hierarchy (H1/H2/H3), sensible page titles/meta defaults per route, and accessible components (labels for form fields, keyboard navigable menus, focus states).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "SEO-friendly structure"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each page has exactly one H1 and logical subsequent headings.",
+        "Page titles are set per route (e.g., “Home | Gym Workout Place”).",
+        "Form fields have associated labels; interactive elements are keyboard accessible and show visible focus states."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Add generated image assets to the frontend as static files and wire them into the UI (store under frontend/public/assets/generated and reference them from pages/cards).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2",
+          "msg-4"
+        ],
+        "quotes": [
+          "Professional gym photography with strong lighting",
+          "Professional trainer images",
+          "all think right you build website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All required generated images exist under frontend/public/assets/generated.",
+        "Home/About/Programs/Trainers/Gallery use the generated images (no broken links).",
+        "The site remains performant (use reasonable image dimensions for their usage)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, and frontend/src/components/ui must not be edited (compose them instead).",
+    "Backend must remain a single Motoko actor in backend/main.mo; only add backend/migration.mo if state upgrades are necessary."
+  ],
+  "nonGoals": [
+    "Implementing the site in WordPress (the build is React + Motoko while visually resembling a WordPress gym theme).",
+    "Embedding interactive Google Maps or using Google Maps APIs (use external link only).",
+    "WhatsApp API integration (use external wa.me link only).",
+    "Payments, subscriptions, or member login accounts."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Homepage hero gym interior with dramatic lighting, dark tones and red accents (home-hero.dim_2400x1350.png)",
+      "Gym interior wide shot, modern equipment, dark energetic mood (about-hero.dim_2000x1200.png)",
+      "Workout/program image: strength training scene (program-strength.dim_1600x1000.png)",
+      "Workout/program image: weight training scene (program-weight.dim_1600x1000.png)",
+      "Workout/program image: cardio training scene (program-cardio.dim_1600x1000.png)",
+      "Workout/program image: CrossFit training scene (program-crossfit.dim_1600x1000.png)",
+      "Workout/program image: functional training scene (program-functional.dim_1600x1000.png)",
+      "Workout/program image: fat loss program scene (program-fatloss.dim_1600x1000.png)",
+      "Workout/program image: muscle gain program scene (program-musclegain.dim_1600x1000.png)",
+      "Workout/program image: HIIT workout scene (program-hiit.dim_1600x1000.png)",
+      "Workout/program image: personal training session scene (program-personaltraining.dim_1600x1000.png)",
+      "Trainer portrait photo 1, professional fitness coach, studio-like lighting (trainer-1.dim_1200x1200.png)",
+      "Trainer portrait photo 2, professional fitness coach, studio-like lighting (trainer-2.dim_1200x1200.png)",
+      "Trainer portrait photo 3, professional fitness coach, studio-like lighting (trainer-3.dim_1200x1200.png)",
+      "Transformation highlight before/after style collage with fitness aesthetic (transformation-1.dim_1600x900.png)",
+      "Transformation highlight before/after style collage with fitness aesthetic (transformation-2.dim_1600x900.png)",
+      "Gallery image: gym interior (gallery-interior-1.dim_1600x1000.png)",
+      "Gallery image: gym interior (gallery-interior-2.dim_1600x1000.png)",
+      "Gallery image: workout session (gallery-workout-1.dim_1600x1000.png)",
+      "Gallery image: workout session (gallery-workout-2.dim_1600x1000.png)",
+      "Gallery image: equipment close-up (gallery-equipment-1.dim_1600x1000.png)",
+      "Gallery image: equipment close-up (gallery-equipment-2.dim_1600x1000.png)",
+      "Gallery image: client workout moment (gallery-client-1.dim_1600x1000.png)",
+      "Gallery image: client workout moment (gallery-client-2.dim_1600x1000.png)"
+    ],
+    "edits": []
+  }
+}

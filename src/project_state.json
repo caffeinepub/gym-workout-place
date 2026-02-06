@@ -1,0 +1,177 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a modern, professional, mobile-responsive gym marketing website (WordPress theme style look) for 'Gym Workout Place' as a demo/portfolio client pitch site, with specified pages, sections, and lead-gen CTAs.",
+  "architectural_notes": [
+    "Site should emulate a modern WordPress gym theme style (look/UX), but built as a standard web app/site.",
+    "Use high-quality placeholder/generic fitness imagery until user provides final assets.",
+    "WhatsApp and Google Maps should be implemented as simple external links if full API/embed is not available."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Homepage hero gym interior with dramatic lighting, dark tones and red accents (home-hero.dim_2400x1350.png)\n- Gym interior wide shot, modern equipment, dark energetic mood (about-hero.dim_2000x1200.png)\n- Workout/program image: strength training scene (program-strength.dim_1600x1000.png)\n- Workout/program image: weight training scene (program-weight.dim_1600x1000.png)\n- Workout/program image: cardio training scene (program-cardio.dim_1600x1000.png)\n- Workout/program image: CrossFit training scene (program-crossfit.dim_1600x1000.png)\n- Workout/program image: functional training scene (program-functional.dim_1600x1000.png)\n- Workout/program image: fat loss program scene (program-fatloss.dim_1600x1000.png)\n- Workout/program image: muscle gain program scene (program-musclegain.dim_1600x1000.png)\n- Workout/program image: HIIT workout scene (program-hiit.dim_1600x1000.png)\n- Workout/program image: personal training session scene (program-personaltraining.dim_1600x1000.png)\n- Trainer portrait photo 1, professional fitness coach, studio-like lighting (trainer-1.dim_1200x1200.png)\n- Trainer portrait photo 2, professional fitness coach, studio-like lighting (trainer-2.dim_1200x1200.png)\n- Trainer portrait photo 3, professional fitness coach, studio-like lighting (trainer-3.dim_1200x1200.png)\n- Transformation highlight before/after style collage with fitness aesthetic (transformation-1.dim_1600x900.png)\n- Transformation highlight before/after style collage with fitness aesthetic (transformation-2.dim_1600x900.png)\n- Gallery image: gym interior (gallery-interior-1.dim_1600x1000.png)\n- Gallery image: gym interior (gallery-interior-2.dim_1600x1000.png)\n- Gallery image: workout session (gallery-workout-1.dim_1600x1000.png)\n- Gallery image: workout session (gallery-workout-2.dim_1600x1000.png)\n- Gallery image: equipment close-up (gallery-equipment-1.dim_1600x1000.png)\n- Gallery image: equipment close-up (gallery-equipment-2.dim_1600x1000.png)\n- Gallery image: client workout moment (gallery-client-1.dim_1600x1000.png)\n- Gallery image: client workout moment (gallery-client-2.dim_1600x1000.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-coherent-modern-wordpress-gym-theme-visual-design-system-for-the-site-and-apply-it-consistently-dark-energetic-palette-black-red-dark-grey-bold-headings-strong-cta-buttons-clean-spacing-professional-fitness-vibe",
+      "title": "Create a coherent, modern “WordPress gym theme” visual design system for the site and apply it consistently (dark energetic palette: black/red/dark grey; bold headings; strong CTA buttons; clean spacing; professional fitness vibe).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-site-wide-layout-components-sticky-header-navigation-with-links-to-home-about-workouts-programs-trainers-membership-plans-gallery-contact-footer-with-social-media-icons-links-smooth-scrolling-for-in-page-anchor-navigation-where-applicable",
+      "title": "Implement site-wide layout components: sticky header navigation with links to Home, About, Workouts/Programs, Trainers, Membership/Plans, Gallery, Contact; footer with social media icons/links; smooth scrolling for in-page anchor navigation where applicable.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-home-page-for-gym-workout-place-with-hero-image-headline-transform-your-body-transform-your-life-sub-text-and-cta-buttons-join-now-free-trial-contact-us-plus-sections-why-choose-us-certified-trainers-modern-equipment-affordable-plans-popular-workouts-with-images-member-transformation-highlights-and-testimonials",
+      "title": "Build the Home page for “Gym Workout Place” with: hero image, headline “Transform Your Body. Transform Your Life.”, sub-text, and CTA buttons (Join Now, Free Trial, Contact Us); plus sections: Why Choose Us (Certified Trainers, Modern Equipment, Affordable Plans), Popular Workouts (with images), Member Transformation Highlights, and Testimonials.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-about-us-page-with-a-professional-gym-interior-hero-image-the-provided-mission-text-and-a-values-section-listing-discipline-consistency-results",
+      "title": "Create the About Us page with a professional gym interior hero image, the provided mission text, and a values section listing: Discipline, Consistency, Results.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-workouts-programs-page-containing-sections-for-each-program-strength-training-weight-training-cardio-training-crossfit-training-functional-training-fat-loss-program-muscle-gain-program-hiit-workout-personal-training-each-program-must-display-a-high-quality-image-and-a-short-2-3-line-description",
+      "title": "Create the Workouts / Programs page containing sections for each program: Strength Training, Weight Training, Cardio Training, CrossFit Training, Functional Training, Fat Loss Program, Muscle Gain Program, HIIT Workout, Personal Training. Each program must display a high-quality image and a short 2–3 line description.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-trainers-page-showing-professional-trainer-images-and-trainer-cards-including-certified-fitness-coach-experience-in-weight-loss-muscle-building-and-personal-training-support",
+      "title": "Create the Trainers page showing professional trainer images and trainer cards including: “Certified Fitness Coach”, “Experience in weight loss & muscle building”, and “Personal training support”.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-membership-plans-page-with-clean-pricing-cards-for-monthly-plan-quarterly-plan-half-yearly-plan-yearly-plan-each-plan-must-list-features-full-gym-access-all-workout-programs-trainer-guidance-flexible-timings-and-include-clear-ctas",
+      "title": "Create the Membership / Plans page with clean pricing cards for: Monthly Plan, Quarterly Plan, Half-Yearly Plan, Yearly Plan. Each plan must list features: Full gym access, All workout programs, Trainer guidance, Flexible timings, and include clear CTAs.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-gallery-page-with-categorized-sections-for-gym-interior-images-workout-sessions-equipment-photos-and-client-workout-moments",
+      "title": "Create the Gallery page with categorized sections for gym interior images, workout sessions, equipment photos, and client workout moments.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-contact-us-page-with-contact-form-whatsapp-button-call-now-button-google-map-location-link-and-business-info-address-phone-number-opening-hours-use-external-links-for-whatsapp-and-google-maps-no-embedded-map-api-requirement",
+      "title": "Create the Contact Us page with: contact form, WhatsApp button, Call Now button, Google Map location link, and business info (address, phone number, opening hours). Use external links for WhatsApp and Google Maps (no embedded map/API requirement).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-site-is-seo-friendly-semantic-heading-hierarchy-h1-h2-h3-sensible-page-titles-meta-defaults-per-route-and-accessible-components-labels-for-form-fields-keyboard-navigable-menus-focus-states",
+      "title": "Ensure the site is SEO-friendly: semantic heading hierarchy (H1/H2/H3), sensible page titles/meta defaults per route, and accessible components (labels for form fields, keyboard navigable menus, focus states).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-image-assets-to-the-frontend-as-static-files-and-wire-them-into-the-ui-store-under-frontend-public-assets-generated-and-reference-them-from-pages-cards",
+      "title": "Add generated image assets to the frontend as static files and wire them into the UI (store under frontend/public/assets/generated and reference them from pages/cards).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create Home page with hero (headline/subtext), CTAs (Join Now/Free Trial/Contact Us), and sections: Why Choose Us, Popular Workouts, Member Transformations, Testimonials",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create About Us page with gym interior hero image, mission text, and values (Discipline, Consistency, Results)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Create Workouts/Programs page with sections for listed programs, each with image and 2–3 line description",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Create Trainers page with trainer cards/images and key details (certified coach, experience, PT support)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Create Membership/Plans page with pricing cards (Monthly/Quarterly/Half-Yearly/Yearly) and included features",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Create Gallery page with categorized gym/workout/equipment/client images",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Create Contact Us page with contact form, WhatsApp button, Call Now button, Google Map location, and business info",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Implement site-wide UI features: sticky header navigation, smooth scrolling, footer with social icons",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Apply dark, energetic fitness theme (black/red/dark grey), bold headings, strong CTAs, clean layout, mobile responsive",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Ensure SEO-friendly structure (semantic headings, meta/title defaults, clean URLs)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Implement backend support for contact form submissions: store submitted messages (name, email/phone, message, timestamp) in the single Motoko actor and expose query/update methods for creating and (optionally) listing submissions for demo/admin debugging.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Gym Workout Place",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
